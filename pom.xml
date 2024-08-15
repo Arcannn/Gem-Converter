@@ -12,4 +12,12 @@
         <module>source/gem-converter-app</module>
     </modules>
 
+    <properties>
+        <!--suppress UnresolvedMavenProperty -->
+        <resources.resource.directory>${maven.multiModuleProjectDirectory}/resources/</resources.resource.directory>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    </properties>
+
 </project>
