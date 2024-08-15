@@ -1,0 +1,25 @@
+*.class
+
+# Package Files #
+*.war
+build
+out
+./tests
+distribution
+.DS_Store
+generated-*
+cvs
+git
+source/*/target
+source/*/*/target
+source/*/*/*/target
+source/*/*/*/*/target
+deployments/*/target
+idea
+
+.classpath
+.project
+
+# IntelliJ files
+*.iml
+.idea

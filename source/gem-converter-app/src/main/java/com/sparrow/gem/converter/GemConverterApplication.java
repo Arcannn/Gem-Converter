@@ -1,8 +1,8 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+package com.sparrow.gem.converter;
+
 import java.util.Scanner;
 
-public class Main {
+public class GemConverterApplication {
     public static void main(String[] args) {
         // Create a Scanner object to read input
         Scanner scanner = new Scanner(System.in);
@@ -51,4 +51,3 @@ public class Main {
         }
     }
 }
-// uncut sap 50xp
