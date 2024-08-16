@@ -16,7 +16,7 @@ public class GemConverterApplication {
         System.out.println("5. Dragonstones");
         System.out.print("Enter the number corresponding to your choice: ");
         int gemChoice = scanner.nextInt();
-        String gemName = "";
+        String gemName;
 
         switch (gemChoice) {
             case 1:
@@ -66,10 +66,10 @@ public class GemConverterApplication {
                 System.out.println("4. Amulets");
                 System.out.print("Enter the number corresponding to your choice: ");
                 int jewelryChoice = scanner.nextInt();
-                String jewelryType = "";
+                String jewelryType;
 
                 // jewelry calcs --
-                int totalXP = 0;
+                int totalXP;
 
                 // sapphires
                 if (gemName.equalsIgnoreCase("sapphires")) {
