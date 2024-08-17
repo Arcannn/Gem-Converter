@@ -18,6 +18,7 @@ public class GemCoverterApplicationGUI  extends JFrame {
         // make window visible on load.
         setVisible(true);
 
+
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10,10,10,10); // padding
@@ -25,9 +26,10 @@ public class GemCoverterApplicationGUI  extends JFrame {
         // adding JLabel to prompt user to select gem type.
         JLabel gemLabel = new JLabel("Please Select type of gem: ");
         gbc.gridx = 0; // column
-        gbc.gridx = 0; // row
+        gbc.gridy = 0; // row
         gbc.anchor = GridBagConstraints.WEST; // align left EAST for right.
         add(gemLabel, gbc);
+
 
         // adding a DROPDOWN BAR. which is JComboBox
         String[] gemTypes = {"Sapphires", "Emeralds", "Diamonds","Rubies","Dragonstones"};
@@ -51,7 +53,6 @@ public class GemCoverterApplicationGUI  extends JFrame {
         gbc.fill = GridBagConstraints.WEST;
         add(gemCountField, gbc);
 
-
         // asks if gems are cut or uncut.
         JLabel cutLabel = new JLabel("Are your gems cut or uncut?");
         gbc.gridx = 0;
@@ -60,7 +61,7 @@ public class GemCoverterApplicationGUI  extends JFrame {
         add(cutLabel, gbc);
 
         // cut or uncut - JComboBox
-        String[] cutOptions = {"Cut", "Uncut"};
+        String[] cutOptions = {"Uncut", "Cut"};
         JComboBox<String> cutComboBox = new JComboBox<>(cutOptions);
         gbc.gridx = 1;
         gbc.gridy = 2;
@@ -74,6 +75,7 @@ public class GemCoverterApplicationGUI  extends JFrame {
         gbc.anchor = GridBagConstraints.WEST;
         jewelryLabel.setVisible(false);
         add(jewelryLabel, gbc);
+
 
         String[] jewelryTypes = {"Necklaces", "Rings", "Bracelets", "Amulet"};
         JComboBox<String> jewelryComboBox = new JComboBox<>(jewelryTypes);
@@ -90,6 +92,9 @@ public class GemCoverterApplicationGUI  extends JFrame {
         gbc.gridwidth = 2; // spans across 2 columns.
         gbc.anchor = GridBagConstraints.CENTER; // centers button.
         add(submitButton, gbc);
+        submitButton.setBackground(new Color(100, 149, 237));
+        submitButton.setForeground(Color.RED);
+        submitButton.setFocusPainted(false);
 
         // action listener to check event.
         cutComboBox.addActionListener(new ActionListener() {
@@ -168,31 +173,31 @@ public class GemCoverterApplicationGUI  extends JFrame {
                 if (jewelry.equalsIgnoreCase("Necklaces")) xp = 55;
                 else if (jewelry.equalsIgnoreCase("Rings")) xp = 40;
                 else if (jewelry.equalsIgnoreCase("Bracelets")) xp = 60;
-                else if (jewelry.equalsIgnoreCase("Amulets")) xp = 65;
+                else if (jewelry.equalsIgnoreCase("Amulet")) xp = 65;
                 break;
             case "emeralds":
                 if (jewelry.equalsIgnoreCase("Necklaces")) xp = 60;
                 else if (jewelry.equalsIgnoreCase("Rings")) xp = 55;
                 else if (jewelry.equalsIgnoreCase("Bracelets")) xp = 65;
-                else if (jewelry.equalsIgnoreCase("Amulets")) xp = 70;
+                else if (jewelry.equalsIgnoreCase("Amulet")) xp = 70;
                 break;
             case "diamonds":
                 if (jewelry.equalsIgnoreCase("Necklaces")) xp = 90;
                 else if (jewelry.equalsIgnoreCase("Rings")) xp = 85;
                 else if (jewelry.equalsIgnoreCase("Bracelets")) xp = 95;
-                else if (jewelry.equalsIgnoreCase("Amulets")) xp = 100;
+                else if (jewelry.equalsIgnoreCase("Amulet")) xp = 100;
                 break;
             case "rubies":
                 if (jewelry.equalsIgnoreCase("Necklaces")) xp = 75;
                 else if (jewelry.equalsIgnoreCase("Rings")) xp = 70;
                 else if (jewelry.equalsIgnoreCase("Bracelets")) xp = 80;
-                else if (jewelry.equalsIgnoreCase("Amulets")) xp = 85;
+                else if (jewelry.equalsIgnoreCase("Amulet")) xp = 85;
                 break;
             case "dragonstones":
                 if (jewelry.equalsIgnoreCase("Necklaces")) xp = 150;
                 else if (jewelry.equalsIgnoreCase("Rings")) xp = 140;
                 else if (jewelry.equalsIgnoreCase("Bracelets")) xp = 160;
-                else if (jewelry.equalsIgnoreCase("Amulets")) xp = 165;
+                else if (jewelry.equalsIgnoreCase("Amulet")) xp = 165;
                 break;
         }
         return xp * count;
